@@ -30,6 +30,7 @@ CREATE TABLE tema_materia (
     tema_materia INT UNIQUE NOT NULL
 );
 
+
 -- Crear la tabla 'libro' con los siguientes campos:
 CREATE TABLE libro (
     ISBN INT PRIMARY KEY NOT NULL,
@@ -102,3 +103,7 @@ CREATE TABLE prestamo_mapa (
     FOREIGN KEY (ID_mapa) REFERENCES mapa(id),
     FOREIGN KEY (DNI_usuario) REFERENCES usuario(dni)
 );
+
+-- Modifico el tipo de dato en la tabla tema_materia. 
+ALTER TABLE tema_materia
+MODIFY tema_materia VARCHAR(100) NOT NULL;
